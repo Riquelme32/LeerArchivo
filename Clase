@@ -1,0 +1,54 @@
+package clase;
+import java.util.ArrayList;
+
+public class Clase 
+{
+   
+    //METODO PARA DAR A CONOCER EL TAMAÑO DE LAS PALABRAS O "CONTARLAS"
+        public void Intercalacion(String A[], String B[]) 
+        {
+        String palabra[];
+        int i, j, z;
+        int tam = 0, mayor = 0, menor = 0;
+        if (A.length > B.length)
+        {
+            mayor = A.length;
+            menor = B.length;
+        } else 
+        {
+            mayor = B.length;
+            menor = A.length;
+        }
+        
+        palabra = new String[mayor];
+        for (i = j = z = 0; i < mayor && z < menor; i++) 
+        {
+            System.out.println(A[i] + " = " + B[z]);
+            if (A[i].equals(B[z]))
+            {
+                palabra[j] = A[i];
+                j++;
+                z++;
+            }
+
+        }
+            Mostrar(palabra);
+    }
+
+        //METODO PARA MOSTRAR PALABRAS
+         public void Mostrar(String con[])
+    {
+            System.out.println("");
+               for (int i = 0; i < con.length; i++) 
+                 {
+                    if (con[i] != null) 
+                 {
+                      System.out.println("[" + i + "] " + con[i]);
+
+                 }
+                 }
+               System.out.print("\n--------------------");
+    }
+
+    
+}
